@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'cookbook.ingredients.apps.IngredientsConfig',
+    'graphene_django',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -106,10 +107,13 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
+# True: templates, forms에만 TIME_ZONE 적용
+# False: DB에도 TIME_ZONE 적용
+# https://grape-blog.tistory.com/18
 USE_TZ = True
 
 
